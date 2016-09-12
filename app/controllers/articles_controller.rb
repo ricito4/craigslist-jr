@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
       redirect_to action: "secret", url: @article.url
     else
       @errors = @article.errors.full_messages
+      @categories = Category.all
       render 'new'
     end
   end
