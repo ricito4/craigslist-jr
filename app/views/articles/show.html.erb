@@ -1,0 +1,9 @@
+<div class="container">
+  <h2><%=@article.title%></h2>
+  <p><%=@article.description%></p>
+  <ul>
+    <li>Email: <%=@article.email%></li>
+    <li>Price: $<%=@article.price%></li>
+  </ul>
+  <%= link_to "#{@category.name}", category_path %>
+</div>
