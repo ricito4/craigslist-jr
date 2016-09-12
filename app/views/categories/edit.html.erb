@@ -1,0 +1,14 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div>
+  <%= form_for @category, url: { action: "update" } do |f| %>
+    <%= f.text_field :name, value: @category.name %>
+    <%= f.submit "Update Category" %>
+  <% end %>
+</div>

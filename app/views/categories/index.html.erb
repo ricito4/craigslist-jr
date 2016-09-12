@@ -1,0 +1,12 @@
+<div class="container">
+  <p> but aren't we already there? </p>
+  <h1>Welcome to Foodlist... Maybe</h1>
+  <h3> Categories: </h3>
+  <ul>
+    <% @categories.each do |category| %>
+    <li><a href="<%= "categories/#{category.id}" %>"><%=category.name %></a></li>
+    <% end %>
+  </ul>
+  <%= link_to 'Create a New Category', new_category_path %>
+  <%= link_to 'Create a New Article', new_article_path %>
+</div>

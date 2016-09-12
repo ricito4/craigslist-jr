@@ -1,0 +1,14 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="container">
+<%= form_for @category do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create Category" %>
+<% end %>
+</div>
