@@ -5,5 +5,5 @@
     <li>Email: <%=@article.email%></li>
     <li>Price: $<%=@article.price%></li>
   </ul>
-  <%= link_to "#{@category.name}", category_path %>
+  <%= link_to "#{@category.name}", category_path(@category) %>
 </div>

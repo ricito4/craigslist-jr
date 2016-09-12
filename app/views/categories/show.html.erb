@@ -1,6 +1,6 @@
 <div class="container">
-<h2><%=@category.name %></h2>
-<br>
+  <h2><%=@category.name %></h2>
+  <br>
 <% @articles.each do |article| %>
   <li><a href="<%= "/articles/#{article.id}" %>"><%=article.title %></a> </li>
   <% end %>
