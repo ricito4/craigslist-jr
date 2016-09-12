@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+nav {
+  background: #0000b3;
+
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 20px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  background: #0000b3;
+  padding: 7px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+}
+
+button {
+  text-decoration: none;
+  display: inline-block;
+  background: #0000b3;
+  padding: 7px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+}
+
+#homerow {
+  background-color: #0000b3;
+  height: 40px;
+}
