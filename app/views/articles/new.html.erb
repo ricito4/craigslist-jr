@@ -1,0 +1,10 @@
+
+<%= form_for @article do |f| %>
+  <%= f.text_field :title, placeholder: "Title" %>
+  <%= f.text_field :price, placeholder: "Price" %>
+  <%= f.text_area :description, placeholder: "Description" %>
+  <%= f.text_field :email, placeholder: "Email" %>
+  <%= f.select(:category_id, options_for_select(@categories.map { |category| [category.name, category.id] })) %>
+
+  <%= f.submit "Create Article!" %>
+<% end %>

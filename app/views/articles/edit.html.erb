@@ -1,0 +1,21 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div>
+  <%= form_for @article, url: { action: "update" } do |f| %>
+    <%= f.text_field :title, placeholder: "Title", value: @article.title %>
+    <%= f.text_field :price, placeholder: "Price", value: @article.price %>
+    <%= f.text_area :description, placeholder: "Description", value: @article.description %>
+    <%= f.text_field :email, placeholder: "Email", value: @article.email %>
+    <%= f.select(:category_id, options_for_select(@categories.map { |category| [category.name, category.id] })) %>
+
+    <%= f.submit "Update Article!" %>
+  <% end %>
+
+  <%= button_to 'Delete Article', { action: "destroy", url: @article.url }, method: :delete %>
+</div>
