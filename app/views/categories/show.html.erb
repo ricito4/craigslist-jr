@@ -1,0 +1,10 @@
+<div class="container">
+<h2><%=@category.name %></h2>
+<br>
+<% @articles.each do |article| %>
+  <li><a href="<%= "/articles/#{article.id}" %>"><%=article.title %></a> </li>
+  <% end %>
+</ul><br>
+<%= link_to 'Edit This Category', edit_category_path %>
+<%= button_to 'Delete This Category', { action: "destroy", id: @category.id }, method: :delete %>
+</div>
